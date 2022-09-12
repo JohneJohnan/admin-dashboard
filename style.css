@@ -1,0 +1,26 @@
+body {
+    display: grid;
+    grid-template: max-content 1fr / 1fr 4fr;
+}
+#sidebar {
+    grid-row: 1 / -1;
+}
+#header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#buttons {
+    place-self: center;
+}
+#main {
+    display: grid;
+    grid-template: max-content max-content / 5fr 2fr;
+}
+#projects {
+    grid-row: 1 / -1;
+}
+#projects > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, auto);
+}
