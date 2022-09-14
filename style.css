@@ -10,9 +10,21 @@
     margin: 0;
     padding: 0;
 }
+h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+h5 {
+    font-size: calc(.4rem + .5vw);
+}
+p {
+    color: #777;
+    font-size: calc(.4rem + .4vw);
+}
 body {
     display: grid;
     grid-template: max-content 1fr / min(25vw, 15rem) 1fr;
+    min-height: 100vh;
 }
 #sidebar {
     grid-row: 1 / -1;
@@ -33,6 +45,10 @@ input[type="search"] {
 }
 #header > div{
     margin: 16px 40px;
+}
+#header {
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2.5px;
+    z-index: 1;
 }
 #header-top {
     display: grid;
@@ -72,11 +88,10 @@ input[type="search"] {
 }
 #main {
     display: grid;
-    grid-template: max-content max-content / 5fr 2fr;
+    grid-template: min-content max-content / 5fr 2fr;
     background-color: var(--gray);
     padding: 16px;
-    gap:16px;
-    align-content: space-between;
+    gap: 16px;
 }
 #main div {
     border-radius: 6px;
@@ -93,13 +108,25 @@ input[type="search"] {
 .card {
     border-left: 6px solid var(--gold);
 }
+.card h4 {
+    font-size: calc(.8rem + .3vw);
+}
+.card p {
+    font-size: calc(.4rem + .5vw);
+}
 .card,
 #announcements > div,
 #trending > div {
     background-color: white;
     padding: 16px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2.5px;
 }
-h3 {
-    margin-top: 8px;
-    margin-bottom: 8px;
+.id {
+    font-size: calc(.4rem + .6vw);
 }
+.about {
+    color:#777;
+    font-size: calc(.4rem + .6vw);
+    margin: 3px 0;
+}
+
