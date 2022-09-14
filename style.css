@@ -16,6 +16,7 @@ h3 {
 }
 h5 {
     font-size: calc(.4rem + .5vw);
+    margin-bottom: 3px;
 }
 p {
     color: #777;
@@ -152,14 +153,17 @@ input[type="search"] {
 #projects > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
-    gap: 16px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
 }
 .card {
     border-left: 6px solid var(--gold);
+    display: grid;
+    grid-template-rows: repeat(2, max-content) 1fr;
 }
 .card h4 {
     font-size: calc(.8rem + .3vw);
+    margin-bottom: 6px;
 }
 .card p {
     font-size: calc(.4rem + .5vw);
@@ -168,8 +172,44 @@ input[type="search"] {
 #announcements > div,
 #trending > div {
     background-color: white;
-    padding: 16px;
+    padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2.5px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 7%);
+    gap: 12px;
+    justify-content: end;
+    justify-items: end;
+    align-self: end;
+    margin: 12px 6px 6px;
+}
+.buttons button {
+    background-color: #fff;
+    border-style: none;
+    aspect-ratio: 1;
+}
+#announcements > div{
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+}
+#announcements > div > div{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0;
+    border-color: #bbb;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+#announcements > div > div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .id {
     font-size: calc(.4rem + .6vw);
@@ -178,5 +218,18 @@ input[type="search"] {
     color:#777;
     font-size: calc(.4rem + .6vw);
     margin: 3px 0;
+}
+#trending > div{
+    display: grid;
+    gap: 12px;
+}
+#trending > div > div {
+    display: grid;
+    grid-template: max-content max-content / 3rem max-content;
+    gap: 0 12px;
+}
+#trending img {
+    grid-row: 1 / -1;
+    height: 3rem;
 }
 
